@@ -99,7 +99,7 @@ export const getStaticProps: GetStaticProps = async (
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [
-      "/pokemons/info/[id]",
+      "/info/[id]",
       // { params: { id: "6" } }
     ],
     fallback: "blocking",
