@@ -1,0 +1,12 @@
+.table {
+  padding-bottom: 50px;
+}
+
+.tr:hover {
+  background: rgb(226, 233, 225);
+  transition: 0.2s;
+}
+
+.border_right {
+  border-right: 1px solid black;
+}

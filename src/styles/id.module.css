@@ -1,0 +1,14 @@
+.image {
+  /* box-shadow: 1px 1px 10px rgb(14, 36, 36); */
+  border: 1px;
+  border-color: gray;
+  border: 10px solid rgba(255, 111, 0, 1);
+}
+
+.table_container {
+  border-right: 1px solid gray;
+}
+
+.border_right {
+  border-left: 1px solid black;
+}

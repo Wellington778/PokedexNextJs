@@ -1,0 +1,39 @@
+.container {
+  margin-top: 12px;
+}
+
+.special {
+  border-radius: px;
+  color: white;
+  margin-right: 3px;
+  padding: 7px;
+  /* border: 1px solid rgba(211, 18, 18, 0.616); */
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.52);
+}
+
+.legendary {
+  background: rgb(231, 230, 22);
+  background: linear-gradient(
+    5deg,
+    rgba(231, 230, 22, 1) 0%,
+    rgba(252, 12, 11, 1) 100%
+  );
+}
+
+.mythical {
+  background: rgb(22, 176, 231);
+  background: linear-gradient(
+    5deg,
+    rgba(22, 176, 231, 1) 0%,
+    rgba(11, 252, 15, 1) 100%
+  );
+}
+
+.baby {
+  background: rgb(223, 80, 128);
+  background: linear-gradient(
+    187deg,
+    rgba(223, 80, 128, 1) 9%,
+    rgba(253, 209, 224, 1) 100%
+  );
+}
