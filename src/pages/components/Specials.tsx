@@ -1,4 +1,4 @@
-type SpecialsParam = { specials: Array<string> | null };
+type SpecialsParam = { specials: Array<string | null> | null };
 import styles from "@/styles/Specials.module.css";
 
 function Specials({ specials }: SpecialsParam): JSX.Element {

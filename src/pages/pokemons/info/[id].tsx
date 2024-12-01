@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import ErrorMessage from "@/pages/components/ErrorMessage";
 import TypeComponent from "@/pages/components/Type";
-import { getRawPokemon } from "@/pages/utils/fetch-names";
+import { getRawPokemon } from "@/utils/fetch-names";
 import styles from "@/styles/id.module.css";
 import Specials from "@/pages/components/Specials";
 import types from "@/styles/Type.module.css";

@@ -6,7 +6,7 @@ import type {
   PreviewData,
 } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { fetchNames } from "../utils/fetch-names";
+import { fetchNames } from "../../utils/fetch-names";
 import Title from "../components/Title";
 import PokeCard from "../components/PokeCard";
 

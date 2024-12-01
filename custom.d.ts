@@ -9,7 +9,7 @@ interface Pokemon {
   types: Array;
   abilities: Array<any>;
   flavor_text: Array;
-  special: Array<string> | null;
+  special: Array<string | null>;
 }
 
 type WeatherDetailType = {
