@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export const getPokemon = async (
   idParam: number
 ): Promise<responseItemType> => {
@@ -67,9 +69,11 @@ export async function getRawPokemon(
 export const fetchNames = async () => {
   const pokemons: responseItemType[] = [];
   let names: responseItemType[];
+  const [random, setRandom] = useState(1);
+  useEffect(() => setRandom(Math.floor(Math.random() * 1025)), []);
+
   try {
-    for (let i = 1; i <= 10; i++)
-      pokemons.push(await getPokemon(Math.floor(Math.random() * 1025)));
+    for (let i = 1; i <= 10; i++) pokemons.push(await getPokemon(random));
   } catch (err) {
     pokemons.push({
       id: "0000",

@@ -1,3 +1,4 @@
+"use client";
 import Head from "next/head";
 import Image from "next/image";
 import localFont from "next/font/local";
@@ -5,8 +6,12 @@ import styles from "@/styles/Home.module.css";
 import Title from "./components/Title";
 import SearchInput from "./components/SearchInput";
 import Btn from "./components/Btn";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [random, setRandom] = useState(1);
+  useEffect(() => setRandom(Math.floor(Math.random() * 1025)), []);
+
   return (
     <>
       <Head>
@@ -30,10 +35,7 @@ export default function Home() {
           <SearchInput />
           <div className="center">
             <div className="row">
-              <Btn
-                goTo={`/pokemons/info/${Math.floor(Math.random() * 1025)}`}
-                text="Random Pokemon"
-              />
+              <Btn goTo={`/pokemons/info/${random}`} text="Random Pokemon" />
               <Btn goTo={`/pokemons/`} text="List random Pokemons" />
             </div>
           </div>
