@@ -20,8 +20,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "src/pages/pokemons/names/.[id].tsx"
+    "**/*.tsx"
+    //"src/pages/pokemons/names/.[id].tsx"
   ],
   "exclude": ["node_modules"]
 }
