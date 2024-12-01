@@ -3,6 +3,8 @@ import styles from "@/styles/Stats.module.css";
 type StatsProps = { stats: Array<any> };
 
 function Stats({ stats }: StatsProps): JSX.Element {
+  if (!stats) return <></>;
+
   const table = stats.map((stat, idx) => {
     return (
       <tr className={styles.tr} key={idx}>

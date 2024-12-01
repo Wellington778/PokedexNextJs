@@ -4,6 +4,7 @@ import TypeComponent from "./Type";
 import styles from "@/styles/PokeCard.module.css";
 
 export default function PokeCard({ pokemon }: Params): JSX.Element {
+  if (!pokemon) return <></>;
   const path = `/pokemons/info/${pokemon.id}`;
 
   //   <div key={idx}>

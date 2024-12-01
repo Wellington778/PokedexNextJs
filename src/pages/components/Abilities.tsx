@@ -5,11 +5,11 @@ type abilitiesParam = {
   abilities: Array<any>;
 };
 type SimplifiedObj = { name: string; url: string; is_hidden: boolean };
-type FinalObj = { name: string; description: string; is_hidden: boolean };
 
 export default function Abilties({ abilities }: abilitiesParam): JSX.Element {
+  if (!abilities) return <></>;
   function simplifyObj(abilities: Array<any>): SimplifiedObj[] {
-    const simplifiedObj = abilities.map((item): SimplifiedObj => {
+    const simplifiedObj = abilities.map((item: any) => {
       return {
         name: item.ability.name,
         url: item.ability.url,

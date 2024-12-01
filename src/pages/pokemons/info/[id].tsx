@@ -10,7 +10,7 @@ import { ParsedUrlQuery } from "querystring";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import ErrorMessage from "@/pages/components/ErrorMessage";
-import TypeComponent from "@/pages/components/Type";
+import Type from "@/pages/components/Type";
 import { getRawPokemon } from "@/utils/fetch-names";
 import styles from "@/styles/id.module.css";
 import Specials from "@/pages/components/Specials";
@@ -38,7 +38,7 @@ const Info: NextPage = (
       .catch(() => invalidPokemon());
   }, []);
 
-  if (!pokemon) return;
+  if (!pokemon) return <></>;
 
   let bgColor;
   if (pokemon.special)
@@ -61,7 +61,7 @@ const Info: NextPage = (
         height={300}
       />
       <h1 className="h1">{pokemon.name.toUpperCase().replace("-", " ")}</h1>
-      <TypeComponent types={pokemon.types} />
+      <Type types={pokemon.types} />
       <Specials specials={pokemon.special} />
       ________________________________________
       <h2 className="h2">About</h2>
@@ -99,8 +99,8 @@ export const getStaticProps: GetStaticProps = async (
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [
-      //"/info/[id]",
-      // { params: { id: "6" } }
+      // "pokemons/info/[id]",
+      { params: { id: "6" } },
     ],
     fallback: "blocking",
   };

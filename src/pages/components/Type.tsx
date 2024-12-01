@@ -1,6 +1,7 @@
 import styles from "@/styles/Type.module.css";
 
-export default function TypeComponent({ types }: { types: Array<string> }) {
+export default function Type({ types }: { types: Array<string> }) {
+  if (!types) return <></>;
   return (
     <div>
       {types.map((poketype) => {
