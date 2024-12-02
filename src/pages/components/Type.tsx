@@ -6,12 +6,11 @@ export default function Type({ types }: { types: Array<string> }) {
     <div>
       {types.map((poketype) => {
         return (
-          <span
-            key={poketype}
-            className={`${styles.type} ${styles[`${poketype}`]}`}
-          >
-            {poketype}
-          </span>
+          <div key={poketype} className="container type">
+            <span className={`${styles.type} ${styles[`${poketype}`]}`}>
+              {poketype}
+            </span>
+          </div>
         );
       })}
     </div>

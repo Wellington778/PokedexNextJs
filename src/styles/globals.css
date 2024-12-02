@@ -113,6 +113,11 @@ svg text {
 }
 .card {
   padding: 10px;
+  height: 200px;
+  /* margin-top: 100px; */
+}
+.type {
+  margin-bottom: 10px;
 }
 .card:hover {
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);

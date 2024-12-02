@@ -60,7 +60,8 @@ const Info: NextPage = (
         width={300}
         height={300}
       />
-      <h1 className="h1">{pokemon.name.toUpperCase().replace("-", " ")}</h1>
+      <h1 className="h1">{pokemon.name.toUpperCase().replaceAll("-", " ")}</h1>
+      <h6>ID: {pokemon.id}</h6>
       <Type types={pokemon.types} />
       <Specials specials={pokemon.special} />
       ________________________________________

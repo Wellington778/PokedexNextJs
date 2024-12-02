@@ -5,7 +5,7 @@ interface Pokemon {
   stats: Array;
   height: number;
   weight: number;
-  message?: string;
+  message: string | null;
   types: Array;
   abilities: Array<any>;
   flavor_text: Array;

@@ -21,6 +21,7 @@ export const getPokemon = async (
 export async function getRawPokemon(
   idParam: number | string
 ): Promise<Pokemon> {
+  if (idParam === 0) idParam = 1;
   const rawResponse = await fetch(
     `https://pokeapi.co/api/v2/pokemon/${idParam}`
   );
@@ -28,7 +29,7 @@ export async function getRawPokemon(
     `https://pokeapi.co/api/v2/pokemon-species/${idParam}`
   );
 
-  let { id, sprites, name, stats, height, weight, message, types, abilities } =
+  let { id, sprites, name, stats, height, weight, types, abilities } =
     await rawResponse.json();
   let { flavor_text_entries, is_baby, is_legendary, is_mythical } =
     await specieResponse.json();
@@ -58,7 +59,7 @@ export async function getRawPokemon(
     stats,
     height,
     weight,
-    message,
+    message: null,
     types,
     flavor_text,
     special,
@@ -69,8 +70,9 @@ export async function getRawPokemon(
 export const fetchNames = async () => {
   const pokemons: responseItemType[] = [];
   let names: responseItemType[];
-  const [random, setRandom] = useState(1);
-  useEffect(() => setRandom(Math.floor(Math.random() * 1025)), []);
+
+  let random = Math.floor(Math.random() * 1025);
+  for (let i = 0; i <= 10; i++) random = Math.floor(Math.random() * 1025);
 
   try {
     for (let i = 1; i <= 10; i++) pokemons.push(await getPokemon(random));
